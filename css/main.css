@@ -53,6 +53,8 @@ header .donate-link {
   color: white;
   /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
   border-radius: 5px;
+  align-self: flex-end;
+  
 }
 
 .header-paragraph {
@@ -97,6 +99,7 @@ main .content-wrapper {
   justify-content: center;
   flex-flow: row wrap;
   padding: 50px 0;
+  flex-grow: 1;
 }
 
 .main-content-wrapper {
@@ -150,6 +153,11 @@ aside {
   justify-content: center;
   background-color: #f0f8ff;
   padding: 50px 0;
+  width: 300px;
+  flex: 0 0 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
 .aside-content-wrapper {
@@ -222,6 +230,7 @@ footer img {
 
   footer img {
     width: 25%;
+    object-fit: cover;
   }
 
 }
@@ -230,16 +239,19 @@ footer img {
   .about {
     display: flex;
     align-items: center;
+
   }
 
   .about-text {
     width: 50%;
     /* Change the placement of the text by adding order: 1; */
+    order: 1;
   }
 
   .about-image {
     width: 50%;
     /* Change the placement of the image by adding order: 2; */
+    order: 2;
   }
 
 }
@@ -259,6 +271,7 @@ footer img {
 
   .program {
     width: 45%;
+    flex-grow: 1;
   }
 
   .program p {
